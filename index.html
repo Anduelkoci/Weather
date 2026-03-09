@@ -15,6 +15,7 @@
         <div class="search-container">
             <input type="text" id="city" placeholder="Enter city name..." onkeypress="handleEnter(event)">
             <button onclick="getWeather()">Search</button>
+            <button onclick="getLocationWeather()" class="location-btn">📍 Use My Location</button>
         </div>
         <div id="error-message" class="error-message"></div>
         <div id="loading" class="loading">Loading weather data...</div>
@@ -29,6 +30,8 @@
                     <p id="feels-like">Feels like: --</p>
                     <p id="humidity">Humidity: --</p>
                     <p id="wind">Wind: --</p>
+                    <p id="sunrise">Sunrise: --</p>
+                    <p id="sunset">Sunset: --</p>
                 </div>
             </section>
             <section class="forecast">
