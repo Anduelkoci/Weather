@@ -199,3 +199,27 @@ margin-top: 20px;
 text-align: center; 
 font-style: italic;
 }
+.forecast{
+display:flex;
+gap:15px;
+overflow-x:auto;
+padding-bottom:10px;
+}
+
+.day{
+min-width:110px;
+flex-shrink:0;
+}
+
+@media (max-width:768px){
+
+.search-container{
+flex-direction:column;
+gap:10px;
+}
+
+.search-container button{
+width:100%;
+}
+
+}
