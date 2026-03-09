@@ -50,6 +50,15 @@ document.getElementById('wind').textContent =
 document.getElementById('feels-like').textContent =
 `Feels like: ${Math.round(currentData.main.feels_like)}°C`;
 
+const sunrise = new Date(currentData.sys.sunrise * 1000)
+.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
+
+const sunset = new Date(currentData.sys.sunset * 1000)
+.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
+
+document.getElementById("sunrise").textContent = `Sunrise: ${sunrise}`;
+document.getElementById("sunset").textContent = `Sunset: ${sunset}`;
+
 const currentIcon = currentData.weather[0].icon;
 
 document.querySelector('.current-weather .icon').innerHTML =
